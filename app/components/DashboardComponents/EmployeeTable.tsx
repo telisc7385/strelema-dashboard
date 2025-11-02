@@ -18,7 +18,7 @@ export default function EmployeeTable() {
     try {
       setLoading(true);
       const res = await fetch(
-        `https://strelema-task.onrender.com/api/employees?page=${pageNum}&limit=10`,
+        `${process.env.NEXT_PUBLIC_BASE_PATH}/api/employees?page=${pageNum}&limit=10`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
